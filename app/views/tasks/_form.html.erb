@@ -9,10 +9,10 @@
     </div>
   <% end %>
   <%= f.label :status, 'ステータス' %>
-  <%= f.text_field :status %>
+  <%= f.text_field :status, placeholder: "例)未完了" %>
 
-  <%= f.label :task, 'タスク' %>
-  <%= f.text_field :task %>
+  <%= f.label :content, 'タスク' %>
+  <%= f.text_field :content, placeholder: "例)〇〇プロジェクト" %>
 
   <%= f.submit '投稿' %>
 <% end %>
