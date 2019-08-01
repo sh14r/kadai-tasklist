@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
     root to: 'tasks#index'
-    resources :tasks
     get 'signup', to: 'users#new'
-    resources :users, only: [:index, :show, :new, :create]
-    resources :tasks, only: [:index, :show, :new, :create]
+    resources :users, only: [:new, :create]
+    resources :tasks
     
     get 'login', to: 'sessions#new'
     post 'login', to: 'sessions#create'
